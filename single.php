@@ -17,7 +17,7 @@ get_header(); ?>
 		<div class="row single_dress">
 			<div class="primary">
 				<?php
-				// print_r($_GET);
+				
 				/* Start the Loop */
 				if (is_single(8615)) { // /test/ page for filter 
 				?>
