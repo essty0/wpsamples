@@ -53,7 +53,7 @@ get_header(); ?>
 
 					$data = $_GET;
 					
-					// print_r($data);
+				
 					// Get posts based on request
 					if (empty($data['size']) && empty($data['length']) && empty($data['color']) && empty($data['collection'])) $blankReq = 1;
 					else $blankReq = 0;
@@ -141,7 +141,7 @@ get_header(); ?>
 					}
 					$colorID = getFilteredPosts($allColor);
 					if(empty($collectionID) && !(empty($data['size'])) && empty($data['color']) && empty($data['length'])){
-						// print_r($commonArr);
+						
 						$commonArr = $sizeID;
 					} elseif(empty($data['color']) && !(empty($collectionID)) && empty($data['size']) && empty($data['length'])){
 						$commonArr = $collectionID;
@@ -190,7 +190,7 @@ get_header(); ?>
 						endif;
 						echo "<nav class='navigation pagination'><div class='nav-links'>";
 						echo paginate_links(array(
-							// 'base' => site_url() .  '/test/%_%',
+							
 							'base' => @add_query_arg('pp', '%#%'),
 							'format' => '?pp=%#%&',
 							'total' => $wp_query->max_num_pages,
